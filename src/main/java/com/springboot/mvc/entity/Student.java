@@ -18,11 +18,12 @@ public class Student {
 	@Column(name="id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	public Student(String fname, String lname, int id) {
+	public Student(String fname, String lname,int id) {
 		super();
 		this.fname = fname;
 		this.lname = lname;
-		this.id    =  id;
+		this.id    = id;
+		
 	}
 	public String getFname() {
 		return fname;
@@ -48,7 +49,7 @@ public class Student {
 	}
 	@Override
 	public String toString() {
-		return "Student [fname=" + fname + ", lname=" + lname +", id=\" + id +\"]";
+		return "Student [fname=" + fname + ", lname=" + lname +", id=" + id +"]";
 	}
 	
 }

@@ -2,5 +2,15 @@
 body{
  background-image: url("./Images/road.png");
  background-color: #cccccc;
-
+}
+.header{
+	height:150px;
+	width:100%;
+	box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+	background-color: #7A7DCA;
+}
+.container{
+     margin-top:-400px;
+ 
+      
 }
