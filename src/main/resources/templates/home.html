@@ -8,27 +8,43 @@
 <script th:src="@{/Js/script.js}"></script>
 </head>
 <body>
-<div class="header">
-<h3 class="header">DashBoard</h3>
-</div>
-<form action="process" method="post">
-  <div class="imgcontainer">
-    <img th:src="@{/Images/session.png}" alt="Avatar" class="avatar">
-  
-  </div>
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="fname" required>
-</br>
-    <label for="psw"><b>Password</b></label>
-    <input type="text" placeholder="Enter Password" name="lname" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
-</br>
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+ <h2>This is a Thymeleaf template</h2>
 
-</form>
+    <form action="#" th:object="${department}" th:action="@{/formData}" method="post">
+
+      <fieldset>
+
+        <div>
+          <label for="Name" th:text="#{department.deptName}">Name: </label>
+          <input type="text" th:field="*{deptName}" />
+        </div>
+                <div>
+          <label for="Name" th:text="#{department.deptId}">Id: </label>
+          <input type="text" th:field="*{deptId}" />
+        </div>
+                <div>
+          <label for="Name" th:text="#{department.deptCity}">City: </label>
+          <input type="text" th:field="*{deptCity}" />
+        </div>
+        <!--  <div>
+          <label th:text="#{subscription.type}">Type: </label>
+          <ul>
+            <li th:each="type : ${allTypes}">
+              <input type="radio" th:field="*{subscriptionType}" th:value="${type}" />
+              <label th:for="${#ids.prev('subscriptionType')}"
+                th:text="#{|subscriptionType.${type}|}">First type</label>
+            </li>
+            <li th:remove="all"><input type="radio" /> <label>Second Type</label></li>
+          </ul>
+        </div> -->
+
+        <div class="submit">
+          <button type="submit" >Subscribe me!</button>
+        </div>
+
+      </fieldset>
+
+    </form>
+
 </body>
 </html>

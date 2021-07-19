@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,11 +19,20 @@ public class Student {
 	@Column(name="id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	public Student(String fname, String lname,int id) {
+	@OneToOne
+	private Department dept;
+	public Department getDept() {
+		return dept;
+	}
+	public void setDept(Department dept) {
+		this.dept = dept;
+	}
+	public Student(String fname, String lname,int id,Department dept) {
 		super();
 		this.fname = fname;
 		this.lname = lname;
 		this.id    = id;
+		this.dept  =  dept;
 		
 	}
 	public String getFname() {

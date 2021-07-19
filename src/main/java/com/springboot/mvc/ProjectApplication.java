@@ -16,14 +16,14 @@ public class ProjectApplication {
 		
 		
 	}
-        @Bean
-	    CommandLineRunner CommandLineRunner(StudentDao studentdao) {
-	    	return args ->{
-	    		Student st=new Student("Raghvendra","Tiwari",1);
-	    		studentdao.save(st);
-	    	};
-	    	
-	    }
+//        @Bean
+//	    CommandLineRunner CommandLineRunner(StudentDao studentdao) {
+//	    	return args ->{
+//	    		Student st=new Student("Raghvendra","Tiwari",1);
+//	    		studentdao.save(st);
+//	    	};
+//	    	
+//	    }
 	    		
 	
 }

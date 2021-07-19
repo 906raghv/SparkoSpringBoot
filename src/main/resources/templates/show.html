@@ -30,11 +30,11 @@
                        <ul> 
                            <li><a href="#home" class="scroll">Home</a></li>
                            <li>/</li>
-                           <li><a href="#about" class="scroll">About</a></li>
+                           <li><a href="/sign_up" class="scroll">Sign up</a></li>
                            <li>/</li>
-                           <li><a href="/parent/show" class="scroll">Register</a></li>
+                           <li><a href="#raghv" class="scroll">Services</a></li>
                            <li>/</li>
-                           <li><a href="#team" class="scroll">Focus</a></li>
+                           <li><a href="#team" class="scroll">Tutorials</a></li>
                            <li>/</li>
                            <li><a href="#contact" class="scroll">Contact</a></li>
                        </ul>
@@ -119,6 +119,21 @@
        <!-- End of Parallax --> 
        
        <!-- Start of Services --> 
+       <div id="raghv" th:if="${ not#lists.isEmpty(showAll)}">
+         <table class="table table-hover">
+            <tr>
+              <th scope="col">Vendor</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Description</th>
+            </tr>
+            <tr th:each="product : ${showAll}">
+            <th scope="row">1</th>
+              <td th:text="${product.id}"></td>
+              <td th:text="${product.fname}"></td>
+              <td th:text="${product.lname}"></td>
+            </tr>
+          </table>
+        </div>
        <section class="services" id="services"> 
             <div class="row"> 
                
